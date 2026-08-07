@@ -1,4 +1,4 @@
-This sample shows haw to use SPI on the STM32MP257F-DK discovery kit to read a max6675 thermocouple converter.
+This sample shows how to use SPI on the STM32MP257F-DK discovery kit to read a max6675 thermocouple converter.
 
 Prerequisites:
 set up stm32 development tools and sources on your linux 
