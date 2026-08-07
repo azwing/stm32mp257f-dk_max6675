@@ -8,7 +8,8 @@ see https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP2_boards/STM32MP257
 the difficulty was not the code itself but the configuration of kit to get SPI to work on linux.
 
 First edit /linux-6.6.129/arch/arm64/boot/dts/st/stm32mp257f-dk.dts to enable SPI and configure the chip select GPIO
-************ fin &spi6 and replace like hereunder
+##find &spi6 and replace like hereunder
+<code>
 /*
 &spi6 {
 	pinctrl-names = "default", "sleep";
@@ -31,7 +32,7 @@ First edit /linux-6.6.129/arch/arm64/boot/dts/st/stm32mp257f-dk.dts to enable SP
                 spi-max-frequency = <10000000>; // Max speed (MAX6675 is 4.3MHz max)
         };
 };
-*************
+</code>
 Then compile it and upload it to /boot/stm32mp257f-dk.dtb on the discovery kit
 reboot and you can see spi is actvated by issuing:
 
