@@ -37,13 +37,13 @@ First edit /linux-6.6.129/arch/arm64/boot/dts/st/stm32mp257f-dk.dts to enable SP
 Then compile it and upload it to /boot/stm32mp257f-dk.dtb on the discovery kit
 reboot and you can see spi is actvated by issuing:
 
-$> lsmod | grep spi
+$> lsmod | grep spi<br>
 spidev                 28672  0
 spi_stm32              40960  0
 
 and 
 
-$> ls -l /dev/spi*
+$> ls -l /dev/spi*<br>
 crw------- 1 root root 153, 0 Aug  7 10:23 /dev/spidev0.0
 
 Then you can compile the max6675.c file and upload it via scp on the discovery kit
