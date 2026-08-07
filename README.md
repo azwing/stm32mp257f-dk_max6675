@@ -1,13 +1,14 @@
 This sample shows haw to use SPI on the STM32MP257F-DK discovery kit to read a max6675 thermocouple converter.
 
 Prerequisites:
-set up stm32 developement tools and sources on your linux 
+set up stm32 development tools and sources on your linux 
 see https://wiki.st.com/stm32mpu/wiki/Getting_started/STM32MP2_boards/STM32MP257x-DK/Develop_on_Arm_Cortex-A35/Modify,_rebuild_and_reload_the_Linux_kernel
 
 
 the difficulty was not the code itself but the configuration of kit to get SPI to work on linux.
 
 First edit /linux-6.6.129/arch/arm64/boot/dts/st/stm32mp257f-dk.dts to enable SPI and configure the chip select GPIO
+
 ##find &spi6 and replace like hereunder
 <code>
 /*
